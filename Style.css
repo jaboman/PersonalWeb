@@ -1,0 +1,173 @@
+/* --- General Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Body & Background --- */
+body {
+  background: linear-gradient(135deg, #0a192f, #112240);
+  color: #e6f1ff;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* --- Navbar --- */
+header {
+  background: rgba(247, 154, 5, 0.95);
+  box-shadow: 0 2px 10px rgba(189, 9, 9, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.logo {
+  color: #077528;
+  font-size: 1.5em;
+}
+
+/* --- Nav Links --- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #09499d;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #64ffda;
+}
+
+/* --- Hamburger Menu --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #e6f1ff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* --- Hero Section --- */
+#hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #64ffda;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  transition: transform 0.7s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.25);
+}
+
+#hero h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+#hero h2 span{
+  color: rgb(240, 90, 8);
+}
+#hero h3 span{
+  color: rgb(12, 192, 51);
+}
+
+#hero p {
+  font-size: 1.1em;
+  color: #ccd6f6;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* --- Section Styling --- */
+.section {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.section h2 {
+  color: rgb(18, 214, 181);
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+/* --- Footer --- */
+footer {
+  background: #afb4bcbb;
+  text-align: center;
+  padding: 20px 0;
+  color:white;
+  font-size: 0.9em;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #17b015;
+    flex-direction: column;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    opacity: 5;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    height: auto;
+    padding: 15px 0;
+    opacity: 1;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
